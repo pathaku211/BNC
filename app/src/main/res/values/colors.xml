@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+        <color name="colorDefault">#FFFFFFFF</color>
+        <color name="colorPressed">#3B84F1</color>
+
+
+        <color name="textColorDefault">#3B84F1</color>
+        <color name="textColorPressed">#FFFFFFFF</color>
+
+    <color name="text_color_states">@color/textColorDefault</color>
+
+</resources>

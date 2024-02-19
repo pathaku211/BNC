@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".login"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/icon_account_center"
+            android:contentDescription="userlogo"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/login_email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="18dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:autofillHints="" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false"
+            app:cursorColor="@color/white"
+            app:passwordToggleTint="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_password_input"
+                android:textCursorDrawable="@drawable/cursor_drawable"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/white"
+                android:hint="Password"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:inputType="textPassword"
+                android:padding="18dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText"
+                android:autofillHints=""
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@drawable/button_background_reverse"
+            android:padding="18dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@drawable/button_text_focus_reverse"
+            android:textSize="20sp"
+            android:text="Login"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="1dp"
+            android:backgroundTint="@drawable/button_background"
+            android:padding="18dp"
+            android:text="Register"
+            android:textColor="@drawable/button_text_focus"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
