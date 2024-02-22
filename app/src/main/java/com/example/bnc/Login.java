@@ -84,7 +84,7 @@ public void onStart() {
                             } else {
                                 // If sign in fails, display a message to the user.
 
-                                Toast.makeText(Login.this, "Wrong Passoword or not Registered!!",
+                                Toast.makeText(Login.this, "Wrong Password or not Registered!!",
                                         Toast.LENGTH_SHORT).show();
                             }
                         });

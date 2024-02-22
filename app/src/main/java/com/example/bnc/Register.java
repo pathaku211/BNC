@@ -93,7 +93,7 @@ public class Register extends AppCompatActivity {
         });
     }
 
-    public class User {
+    public static class User {
         public String name;
         public String email;
         public String password;
