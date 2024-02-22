@@ -3,7 +3,14 @@
     <style name="Base.Theme.BNC" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
     <style name="Theme.BNC" parent="Base.Theme.BNC" />
+    <style name="Theme.BNC.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.BNC.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.BNC.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
