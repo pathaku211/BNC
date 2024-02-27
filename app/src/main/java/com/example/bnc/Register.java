@@ -80,7 +80,7 @@ public class Register extends AppCompatActivity {
                                     startActivity(intent);
                                 } else {
                                     // If sign-in fails, display a message to the user.
-                                    Toast.makeText(Register.this, "Already Registered", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Register.this, "Already Registered or Incorrect Email", Toast.LENGTH_SHORT).show();
                                 }
                             });
                 } catch (Exception e) {

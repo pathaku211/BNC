@@ -57,6 +57,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "About Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new aboutfragment());
             }
+            if (itemId == R.id.menu_profile) {
+                Toast.makeText(MainActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
+                replaceFragment(new profilefragment());
+            }
             if (itemId == R.id.menu_logout) {
                 Toast.makeText(this, "Logged Out!!", Toast.LENGTH_SHORT).show();
                 FirebaseAuth.getInstance().signOut();
