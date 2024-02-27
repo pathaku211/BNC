@@ -1,18 +1,27 @@
 package com.example.bnc;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class Login extends AppCompatActivity {
     Button loginBtn;
@@ -20,18 +29,20 @@ public class Login extends AppCompatActivity {
     EditText loginEmailInput, loginPasswordInput;
 
     private FirebaseAuth mAuth;
-// ...
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    // ...
 // Initialize Firebase Auth
-@Override
-public void onStart() {
-    super.onStart();
-    // Check if user is signed in (non-null) and update UI accordingly.
-    FirebaseUser currentUser = mAuth.getCurrentUser();
-    if(currentUser != null){
-        currentUser.reload();
-        updateUI();
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            currentUser.reload();
+            updateUI();
+        }
     }
-}
 
     private void updateUI() {
 //        FirebaseUser user = mAuth.getCurrentUser();
