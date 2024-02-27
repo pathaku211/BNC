@@ -17,6 +17,9 @@
 <!--            android:title="@string/menu_facilities" />-->
 
     </group>
+    <item
+        android:id="@+id/menu_profile"
+        android:title="PROFILE"/>
 
     <group android:id="@+id/group2">
 
