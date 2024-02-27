@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton buttonDrawerToggle;
     NavigationView navigationView;
 
-    Button logout_btn;
+    ImageButton logout_btn;
 
 //    Button logout_btn;
 

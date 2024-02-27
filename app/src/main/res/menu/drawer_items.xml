@@ -5,10 +5,12 @@
 
         <item
             android:id="@+id/menu_home"
-            android:title="@string/menu_home" />
+            android:title="@string/menu_home"
+            android:icon="@drawable/home"/>
         <item
             android:id="@+id/menu_about"
-            android:title="@string/menu_about" />
+            android:title="@string/menu_about"
+            android:icon="@drawable/about"/>
 <!--        <item-->
 <!--            android:id="@+id/menu_gallery"-->
 <!--            android:title="@string/menu_gallery" />-->
@@ -19,13 +21,15 @@
     </group>
     <item
         android:id="@+id/menu_profile"
-        android:title="PROFILE"/>
+        android:title="PROFILE"
+        android:icon="@drawable/user"/>
 
     <group android:id="@+id/group2">
 
         <item
             android:id="@+id/menu_departments"
-            android:title="@string/menu_departments" />
+            android:title="@string/menu_departments"
+            android:icon="@drawable/departments"/>
         <!--    <item-->
         <!--        android:id="@+id/menu_faculty"-->
         <!--        android:title="@string/menu_faculty" />-->
@@ -38,7 +42,8 @@
 <!--        <item-->
         <item
             android:id="@+id/menu_admission"
-            android:title="@string/menu_admission" />
+            android:title="@string/menu_admission"
+            android:icon="@drawable/admissions"/>
         <!--        android:id="@+id/menu_research"-->
         <!--        android:title="@string/menu_research" />-->
 
@@ -53,5 +58,6 @@
 
     <item
         android:id="@+id/menu_logout"
-        android:title="@string/menu_logout" />
+        android:title="@string/menu_logout"
+        android:icon="@drawable/logout"/>
 </menu>
