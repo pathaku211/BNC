@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -15,7 +16,9 @@
             android:layout_height="wrap_content"
             android:src="@drawable/icon_account_center"
             android:background="@android:color/transparent"
-            android:padding="5dp"/>
+            android:padding="5dp"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
 
         <Button
             android:id="@+id/logout_btn"
@@ -24,8 +27,9 @@
             android:layout_gravity="end"
             android:layout_marginRight="20dp"
             android:backgroundTint="@drawable/button_background_reverse"
+            android:text="Logout"
             android:textColor="@drawable/button_text_focus_reverse"
-            android:text="Logout" />
+            tools:ignore="HardcodedText,RtlHardcoded,TextContrastCheck" />
     </Toolbar>
 
 

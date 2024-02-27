@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
+
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageButton buttonDrawerToggle;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         replaceFragment(new homefragment());
         drawerLayout = findViewById(R.id.drawerlayout);
         buttonDrawerToggle = findViewById(R.id.buttondrawertoggle);
@@ -83,3 +86,5 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 }
+
+
