@@ -64,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new profilefragment());
             }
+            if (itemId == R.id.menu_departments) {
+                Toast.makeText(MainActivity.this, "Departments Clicked", Toast.LENGTH_SHORT).show();
+                replaceFragment(new departmentsfragment());
+            }
+            if (itemId == R.id.menu_admission) {
+                Toast.makeText(MainActivity.this, "Admission Clicked", Toast.LENGTH_SHORT).show();
+                replaceFragment(new admissionfragment());
+            }
             if (itemId == R.id.menu_logout) {
                 Toast.makeText(this, "Logged Out!!", Toast.LENGTH_SHORT).show();
                 FirebaseAuth.getInstance().signOut();
