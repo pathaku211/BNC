@@ -2,7 +2,6 @@ package com.example.bnc;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -78,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, Login.class);
                 startActivity(intent);
                 finish();
-
             }
 
             // Close the drawer when an item is selected
