@@ -18,12 +18,6 @@
     </item>
     <item android:left="200dp" android:bottom="400dp" android:right="-100dp" android:top="-40dp">
         <shape android:shape="oval">
-            <rotate
-                android:fromDegrees="0"
-                android:toDegrees="90"
-                android:pivotX="50%"
-                android:pivotY="50%"
-                />
             <gradient
                 android:endColor="@color/blue_blue"
                 android:startColor="@color/blue_tint"
