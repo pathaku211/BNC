@@ -1,9 +1,13 @@
 package com.example.bnc;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import android.view.Window;
 
 import androidx.fragment.app.Fragment;
 
@@ -20,7 +24,7 @@ public class homefragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView( LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_homefragment, container, false);
@@ -39,6 +43,21 @@ public class homefragment extends Fragment {
 
         imageSlider.setImageList(imageList);
 
+
         return rootView;
+
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //checking whether theme is in dark mode or light
+        int mode = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
+
+        //if it is in dark mode color will change
+        if(mode==android.content.res.Configuration.UI_MODE_NIGHT_YES){
+            requireActivity().getWindow().getDecorView().setBackgroundColor(Color.parseColor("#D0D0E3"));
+        };
     }
 }

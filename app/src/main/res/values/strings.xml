@@ -34,6 +34,18 @@
     Along with the Bachelor degree courses in 18 subjects, the college offers M. A. in English and is going to start M. A. course in many other subjects. It provides several vocational courses both under UGC and self-financing schemes such as B. Sc. in Bio-Technology, BCA, Functional English and BBA.\n\n
     This college organizes annual sports, debate, guest lectures, seminars, holi milan, Eid milan and various cultural activities in collaboration with Spic Mackay and others to keep the teachers and students afresh and up to-date in every field and to bring a sense of belonging and togetherness.
 </string>
+    <string name="science">Science</string>
+    <string name="language">Language</string>
+    <string name="social_science">Social Science</string>
+    <string name="vocational">Vocational</string>
+    <string name="department">DEPARTMENT</string>
+    <string name="physics">Physics</string>
+    <string name="chemistry">Chemistry</string>
+    <string name="mathematics">Mathematics</string>
+    <string name="botany">Botany</string>
+    <string name="zoology">Zoology</string>
+    <string name="geology">Geology</string>
+    <string name="statistics">Statistics</string>
 
 
 </resources>

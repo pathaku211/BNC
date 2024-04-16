@@ -2,6 +2,7 @@ package com.example.bnc;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
+       
     }
 
     private void replaceFragment(Fragment fragment) {
