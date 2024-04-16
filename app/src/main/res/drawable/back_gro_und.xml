@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <gradient
+                android:angle="-45"
+                android:startColor="@color/blue_tint"
+                android:endColor="@color/blue_blue"
+                />
+            <padding
+                android:right="3dp"
+                android:left="3dp"
+                android:top="3dp"
+                android:bottom="3dp"
+                />
+        </shape>
+    </item>
+    <item android:left="200dp" android:bottom="400dp" android:right="-100dp" android:top="-40dp">
+        <shape android:shape="oval">
+            <rotate
+                android:fromDegrees="0"
+                android:toDegrees="90"
+                android:pivotX="50%"
+                android:pivotY="50%"
+                />
+            <gradient
+                android:endColor="@color/blue_blue"
+                android:startColor="@color/blue_tint"
+                />
+        </shape>
+    </item>
+    <item android:top="550dp" android:left="200dp" android:bottom="-80dp" android:right="-60dp">
+        <shape android:shape="oval">
+            <gradient
+                android:endColor="@color/blue_blue"
+                android:startColor="@color/blue_tint"
+                />
+        </shape>
+    </item>
+    <item android:right="120dp" android:top="650dp" android:left="100dp" android:bottom="-100dp">
+        <shape android:shape="oval">
+            <gradient
+                android:endColor="@color/blue_blue"
+                android:startColor="@color/blue_tint"
+                />
+        </shape>
+    </item>
+    <item android:right="250dp" android:top="340dp" android:bottom="250dp" android:left="5dp" >
+        <shape android:shape="oval">
+            <gradient
+                android:endColor="@color/blue_blue"
+                android:startColor="@color/blue_tint"
+                />
+        </shape>
+    </item>
+
+</layer-list>
