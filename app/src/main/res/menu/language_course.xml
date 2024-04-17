@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/menu_hindi"
+        android:title="Hindi" />
+    <item
+        android:id="@+id/menu_english"
+        android:title="English" />
+    <item
+        android:id="@+id/menu_sanskrit"
+        android:title="Sanskrit" />
+    <item
+        android:id="@+id/menu_urdu"
+        android:title="Urdu" />
+    <item
+        android:id="@+id/menu_maithili"
+        android:title="Maithili" />
+
+
+</menu>

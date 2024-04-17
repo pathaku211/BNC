@@ -58,6 +58,6 @@ public class homefragment extends Fragment {
         //if it is in dark mode color will change
         if(mode==android.content.res.Configuration.UI_MODE_NIGHT_YES){
             requireActivity().getWindow().getDecorView().setBackgroundColor(Color.parseColor("#D0D0E3"));
-        };
+        }
     }
 }
