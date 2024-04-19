@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/menu_physics"
+        android:title="Physics"
+        />
+    <item
+        android:id="@+id/menu_chemistry"
+        android:title="Chemistry" />
+    <item
+        android:id="@+id/menu_mathematics"
+        android:title="Mathematics" />
+    <item
+        android:id="@+id/menu_botany"
+        android:title="Botany" />
+    <item
+        android:id="@+id/menu_zoology"
+        android:title="Zoology" />
+    <item
+        android:id="@+id/menu_geology"
+        android:title="Geology" />
+    <item
+        android:id="@+id/menu_statistics"
+        android:title="Statistics" />
+
+
+</menu>

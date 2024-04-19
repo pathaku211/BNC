@@ -11,5 +11,13 @@
         <color name="textColorPressed">#FFFFFFFF</color>
 
     <color name="text_color_states">@color/textColorDefault</color>
+    <color name="light_blue">#C9C9E4</color>
+    <color name="blue_tint">#D0D0E3</color>
+    <color name="blue">#8D8DCD</color>
+    <color name="light_brown">#AA9F8F</color>
+    <color name="orange">#EC8A48</color>
+    <color name="blue_blue">#8773AC</color>
+    <color name="dark_blue">#5252AE</color>
+    <color name="grey">#898989</color>
 
 </resources>

@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back_gro_und"
     tools:context=".departmentsfragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/department"
+        android:textSize="30sp"
+        android:layout_marginHorizontal="34sp"
+        android:layout_marginVertical="60sp" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="200dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:padding="20dp"
+        >
+
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:background="@drawable/gradient_background"
+            app:drawableTopCompat="@drawable/science_drawable"
+            android:gravity="center"
+            android:minWidth="150dp"
+            android:minHeight="45dp"
+            android:text="@string/science"
+            android:padding="10dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:background="@drawable/gradient_background"
+            android:gravity="center"
+            android:minWidth="150dp"
+            android:minHeight="45dp"
+            android:text="@string/language"
+            android:padding="10dp"
+            android:textSize="20sp"
+            app:drawableTopCompat="@drawable/language_drawable"/>
+
+        <TextView
+            android:id="@+id/textview3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:background="@drawable/gradient_background"
+            android:gravity="center"
+            android:minWidth="150dp"
+            android:minHeight="45dp"
+            android:text="@string/social_science"
+            android:textSize="20sp"
+            android:padding="10dp"
+            app:drawableTopCompat="@drawable/social_science_drawable" />
+
+        <TextView
+            android:id="@+id/textview4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:background="@drawable/gradient_background"
+            android:gravity="center"
+            android:minWidth="150dp"
+            android:minHeight="45dp"
+            android:text="@string/vocational"
+            android:textSize="20sp"
+            android:padding="10dp"
+            app:drawableTopCompat="@drawable/vocational_drawable" />
+    </GridLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <!-- Constraint the top of the NavigationView to the top of the ConstraintLayout -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/course_navigation"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/science_course"
+            app:itemTextAppearance="@style/NavigationViewTextStyle"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 </FrameLayout>

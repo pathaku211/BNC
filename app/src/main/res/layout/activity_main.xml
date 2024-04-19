@@ -11,11 +11,11 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_below="@+id/drawerlayout" />
 
-    <include layout="@layout/activity_main_content" />
+    <include layout="@layout/activity_toolbar" />
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationview"
@@ -26,5 +26,6 @@
         app:headerLayout="@layout/drawer_header"
         app:itemIconPadding="30dp"
         app:menu="@menu/drawer_items" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

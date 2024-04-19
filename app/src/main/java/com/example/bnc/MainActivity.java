@@ -2,7 +2,7 @@ package com.example.bnc;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.view.MotionEvent;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -64,13 +64,20 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new profilefragment());
             }
+            if (itemId == R.id.menu_departments) {
+                Toast.makeText(MainActivity.this, "Departments Clicked", Toast.LENGTH_SHORT).show();
+                replaceFragment(new departmentsfragment());
+            }
+            if (itemId == R.id.menu_admission) {
+                Toast.makeText(MainActivity.this, "Admission Clicked", Toast.LENGTH_SHORT).show();
+                replaceFragment(new admissionfragment());
+            }
             if (itemId == R.id.menu_logout) {
                 Toast.makeText(this, "Logged Out!!", Toast.LENGTH_SHORT).show();
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(this, Login.class);
                 startActivity(intent);
                 finish();
-
             }
 
             // Close the drawer when an item is selected
@@ -78,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
+       
     }
 
     private void replaceFragment(Fragment fragment) {

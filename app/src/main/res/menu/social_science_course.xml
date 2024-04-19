@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/menu_geography"
+        android:title="Geography" />
+    <item
+        android:id="@+id/menu_history"
+        android:title="History" />
+    <item
+        android:id="@+id/menu_economics"
+        android:title="Economics" />
+    <item
+        android:id="@+id/menu_politicalscience"
+        android:title="Political Science" />
+    <item
+        android:id="@+id/menu_psychology"
+        android:title="Psychology" />
+    <item
+        android:id="@+id/menu_mathematics"
+        android:title="Mathematics" />
+    <item
+        android:id="@+id/menu_philosophy"
+        android:title="Philosophy" />
+    <item
+        android:id="@+id/menu_statistics"
+        android:title="Statistics" />
+    <item
+        android:id="@+id/menu_sociology"
+        android:title="Sociology" />
+
+
+</menu>

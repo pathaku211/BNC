@@ -84,6 +84,11 @@ public class profilefragment extends Fragment {
 
         show.setOnClickListener(v1 -> {
             String roll=roll_input.getText().toString();
+            // Check if the first character is '0'
+            if (roll.startsWith("0")) {
+                // Remove the first character
+                roll = roll.substring(1);
+            }
 
             //  Feching data from firestore using roll
             db.collection("students")
