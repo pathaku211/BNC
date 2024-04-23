@@ -17,9 +17,9 @@
         android:backgroundTint="#CBB5B5">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/userimage"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="match_parent"
             tools:ignore="ContentDescription,ImageContrastCheck"
             tools:srcCompat="@tools:sample/avatars" />
 

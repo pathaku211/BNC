@@ -1,6 +1,7 @@
 package com.example.bnc;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton buttonDrawerToggle;
     NavigationView navigationView;
     TextView username,useremail;
+    ImageView userimage;
 
     ImageButton logout_btn;
 
@@ -49,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         View headerView = navigationView.getHeaderView(0);
         username=headerView.findViewById(R.id.user_name);
         useremail=headerView.findViewById(R.id.user_email);
+        userimage=headerView.findViewById(R.id.userimage);
+
+//        userimage.setImageResource(R.drawable.icon_account_center);
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
