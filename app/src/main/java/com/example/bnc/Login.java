@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -65,6 +66,19 @@ public class Login extends AppCompatActivity {
         loginBtn = findViewById(R.id.login_btn);
         loginEmailInput = findViewById(R.id.login_email_input);
         loginPasswordInput = findViewById(R.id.login_password_input);
+        // Find the "Forgot Password?" TextView
+        TextView forgotPasswordTextView = findViewById(R.id.forgot_password_text);
+
+        // Set an OnClickListener for the text view
+        forgotPasswordTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform the action when the text view is clicked
+                // For example, open a new activity for resetting the password
+                Intent intent = new Intent(Login.this, ResetPassword.class);
+                startActivity(intent);
+            }
+        });
 
 
         registerBtn.setOnClickListener(v -> {
@@ -82,6 +96,9 @@ public class Login extends AppCompatActivity {
             // Check if any field is empty
             if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                 Toast.makeText(Login.this, "Email or Password can't be empty", Toast.LENGTH_SHORT).show();
+            }
+            else if (!isValidEmail(email)) {
+                Toast.makeText(Login.this, "Please enter a valid email address.", Toast.LENGTH_SHORT).show();
             } else {
                 // Perform login logic here
                 // For now, let's just show a Toast message
@@ -95,11 +112,17 @@ public class Login extends AppCompatActivity {
                             } else {
                                 // If sign in fails, display a message to the user.
 
-                                Toast.makeText(Login.this, "Wrong Password or not Registered!!",
+                                Toast.makeText(Login.this, "Wrong Password or "+email+" not Registered!!",
                                         Toast.LENGTH_SHORT).show();
                             }
                         });
             }
         });
+    }
+
+    private boolean isValidEmail(String email) {
+        // Regular expression for validating an email address
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        return email.matches(emailPattern);
     }
 }

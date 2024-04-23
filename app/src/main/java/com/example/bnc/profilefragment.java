@@ -83,7 +83,7 @@ public class profilefragment extends Fragment {
         roll_dob = v.findViewById(R.id.roll_dob);
 
         show.setOnClickListener(v1 -> {
-            String roll=roll_input.getText().toString();
+            String roll = roll_input.getText().toString();
             // Check if the first character is '0'
             if (roll.startsWith("0")) {
                 // Remove the first character

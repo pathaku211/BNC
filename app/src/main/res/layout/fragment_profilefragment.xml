@@ -13,99 +13,95 @@
         android:id="@+id/roll_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
         android:layout_gravity="center"
-        android:hint="ROLL"
+        android:layout_marginTop="-200dp"
+        android:autofillHints=""
         android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="ROLL"
+        android:inputType="text"
         android:padding="18dp"
-        android:textCursorDrawable="@drawable/cursor_drawable"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textCursorDrawable="@drawable/cursor_drawable"
         android:textSize="20sp"
-        android:layout_marginTop="-200dp"
-        tools:ignore="HardcodedText"
-        android:autofillHints=""/>
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/show"
-        android:ems="8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Details"
         android:layout_gravity="center"
         android:layout_marginTop="-115dp"
         android:backgroundTint="@drawable/button_background_reverse"
+        android:ems="8"
         android:padding="10dp"
+        android:text="Show Details"
         android:textColor="@drawable/button_text_focus_reverse"
         android:textSize="20sp"
-        tools:ignore="HardcodedText"
-        />
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-60dp"
         android:hint="Name :"
         android:padding="18dp"
         android:textColorHint="@color/white"
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="-60dp"
-        />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/roll_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-10dp"
         android:background="@drawable/rounded_corner"
         android:padding="18dp"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="-10dp"
-        />
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         android:hint="Registeration No. :"
         android:padding="18dp"
         android:textColorHint="@color/white"
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/roll_registeration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
         android:background="@drawable/rounded_corner"
         android:padding="18dp"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"/>
+        android:textSize="20sp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
         android:hint="DOB :"
         android:padding="18dp"
         android:textColorHint="@color/white"
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="150dp"
-        />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/roll_dob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
         android:background="@drawable/rounded_corner"
         android:padding="18dp"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="200dp"/>
+        android:textSize="20sp" />
 
 </FrameLayout>
