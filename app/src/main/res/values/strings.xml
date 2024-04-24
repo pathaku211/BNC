@@ -46,6 +46,23 @@
     <string name="zoology">Zoology</string>
     <string name="geology">Geology</string>
     <string name="statistics">Statistics</string>
+    <string name="profile">PROFILE</string>
+    <string name="staff">Staff</string>
+    <string name="course">Course</string>
+    <string name="physics_text">Physics</string>
+    <string name="dr_rajkishore_prasad">Dr. Rajkishore Prasad</string>
+    <string name="principal">Principal</string>
+    <string name="link_for_physics_professor"><![CDATA[click <a href=\'https://www.bncollegepatna.com/profile/view_facuilty.php?sna=principal@bncollegepatna.com&email_id=principal@bncollegepatna.com\'>here</a>to visit]]></string>
+    <string name="more_detail">More detail</string>
+    <string name="dr_dinesh_kumar">Dr. Dinesh Kumar</string>
+    <string name="assistant_professor">Assistant Professor</string>
+    <string name="dr_raghwendra_kumar">Dr. Raghwendra Kumar</string>
+    <string name="dr_manish_anand">Dr. Manish Anand</string>
+    <string name="mr_mukesh_chandra_bos">Mr. Mukesh Chandra Bos</string>
+    <string name="assistant_professor_hod"><![CDATA[Assistant professor & HOD]]></string>
+    <string name="bachelor_of_science_honors_physics">Bachelor of Science(Honors) - Physics</string>
+    <string name="syllabus">Syllabus</string>
+    <string name="faculty_member">Faculty Member</string>
 
 
 </resources>
