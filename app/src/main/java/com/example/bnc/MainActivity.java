@@ -1,9 +1,16 @@
 package com.example.bnc;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowInsets;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,12 +22,18 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Objects;
 
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageButton buttonDrawerToggle;
     NavigationView navigationView;
+    TextView username,useremail;
+    ImageView userimage;
 
     ImageButton logout_btn;
 
@@ -36,6 +49,45 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerlayout);
         buttonDrawerToggle = findViewById(R.id.buttondrawertoggle);
         navigationView = findViewById(R.id.navigationview);
+        View headerView = navigationView.getHeaderView(0);
+        username=headerView.findViewById(R.id.user_name);
+        useremail=headerView.findViewById(R.id.user_email);
+        userimage=headerView.findViewById(R.id.userimage);
+
+//        userimage.setImageResource(R.drawable.icon_account_center);
+
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        if (currentUser != null) {
+            // Retrieve user data from Firestore
+            String userId = currentUser.getUid();
+            db.collection("users").document(userId).get()
+                    .addOnSuccessListener(documentSnapshot -> {
+                        if (documentSnapshot.exists()) {
+                            // Get user data from Firestore document
+                            String displayName = documentSnapshot.getString("name");
+                            String email = documentSnapshot.getString("email");
+                            // Set display name and email to TextViews
+                            if (displayName != null && !displayName.isEmpty()) {
+                                username.setText(displayName);
+                            }
+                            if (email != null && !email.isEmpty()) {
+                                useremail.setText(email);
+                            }
+                        }
+                    })
+                    .addOnFailureListener(e -> {
+                        Log.e("Firestore", "Error getting user document", e);
+                    });
+        }
+        // Set an applyInsetsListener to add top margin equal to the height of the notification bar
+        navigationView.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
+            @Override
+            public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
+                setMarginTop(v, insets.getSystemWindowInsetTop());
+                return insets;
+            }
+        });
 
         logout_btn = findViewById(R.id.logout_btn);
 
@@ -86,6 +138,13 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
        
+    }
+
+    // Function to set top margin
+    private void setMarginTop(View view, int topMargin) {
+        ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
+        params.topMargin = topMargin;
+        view.setLayoutParams(params);
     }
 
     private void replaceFragment(Fragment fragment) {

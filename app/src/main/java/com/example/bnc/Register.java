@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Objects;
+
 public class Register extends AppCompatActivity {
     Button registerBtn;
     EditText registerNameInput, registerEmailInput, registerPasswordInput;
@@ -57,30 +59,41 @@ public class Register extends AppCompatActivity {
             // Check if any field is empty
             if (TextUtils.isEmpty(name) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                 Toast.makeText(Register.this, "Fields can't be empty.!!", Toast.LENGTH_SHORT).show();
+            } else if (!isValidEmail(email)) {
+                Toast.makeText(Register.this, "Please enter a valid email address.", Toast.LENGTH_SHORT).show();
+            } else if (password.length() < 6) {
+                Toast.makeText(Register.this, "Password must be at least 6 characters long.", Toast.LENGTH_SHORT).show();
             } else {
                 try {
-                    // Create a User object with the provided data
-                    User user = new User(name, email, password);
-
-                    // Add the user to the Firestore collection
-
                     // Optionally, you can also use Firebase Authentication for user registration
                     mAuth.createUserWithEmailAndPassword(email, password)
                             .addOnCompleteListener(this, task -> {
                                 if (task.isSuccessful()) {
-                                    db.collection("users") // Use lowercase for collection name
-                                            .add(user)
+                                    // Get the UID of the newly created user
+                                    String userId = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
+
+                                    // Create a User object with the provided data
+                                    User user = new User(name, email, password, userId);
+
+                                    // Add the user to the Firestore collection
+                                    db.collection("users")
+                                            .document(userId) // Use the UID as the document ID
+                                            .set(user) // Set the user data in the document
                                             .addOnSuccessListener(documentReference -> {
                                                 Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                                                 // You can add additional logic here after a successful registration
+
+                                                // Navigate to the login screen
+                                                Intent intent = new Intent(Register.this, Login.class);
+                                                startActivity(intent);
                                             })
-                                            .addOnFailureListener(e -> Toast.makeText(Register.this, "Registration Failed", Toast.LENGTH_SHORT).show());
-                                    // Sign in success, update UI with the signed-in user's information
-                                    Intent intent = new Intent(Register.this, Login.class);
-                                    startActivity(intent);
+                                            .addOnFailureListener(e -> {
+                                                Toast.makeText(Register.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                                                Log.e("Firestore", "Error adding document", e);
+                                            });
                                 } else {
                                     // If sign-in fails, display a message to the user.
-                                    Toast.makeText(Register.this, "Already Registered or Incorrect Email", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Register.this, "Already Registered", Toast.LENGTH_SHORT).show();
                                 }
                             });
                 } catch (Exception e) {
@@ -93,18 +106,26 @@ public class Register extends AppCompatActivity {
         });
     }
 
+    private boolean isValidEmail(String email) {
+        // Regular expression for validating an email address
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        return email.matches(emailPattern);
+    }
+
     public static class User {
         public String name;
         public String email;
         public String password;
+        public String userId;
 
         // Constructors go here
 
         // Example constructor
-        public User(String name, String email, String password) {
+        public User(String name, String email, String password, String userId) {
             this.name = name;
             this.email = email;
             this.password = password;
+            this.userId = userId;
         }
     }
 }

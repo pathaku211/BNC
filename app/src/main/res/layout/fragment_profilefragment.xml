@@ -1,111 +1,395 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    android:gravity="center"
-    android:padding="16dp"
+    android:orientation="vertical"
     tools:context=".profilefragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <EditText
-        android:id="@+id/roll_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:layout_gravity="center"
-        android:hint="ROLL"
-        android:background="@drawable/rounded_corner"
-        android:padding="18dp"
-        android:textCursorDrawable="@drawable/cursor_drawable"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="20sp"
-        android:layout_marginTop="-200dp"
-        tools:ignore="HardcodedText"
-        android:autofillHints=""/>
-
-    <Button
-        android:id="@+id/show"
-        android:ems="8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Details"
-        android:layout_gravity="center"
-        android:layout_marginTop="-115dp"
-        android:backgroundTint="@drawable/button_background_reverse"
-        android:padding="10dp"
-        android:textColor="@drawable/button_text_focus_reverse"
-        android:textSize="20sp"
-        tools:ignore="HardcodedText"
-        />
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name :"
-        android:padding="18dp"
-        android:textColorHint="@color/white"
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="-60dp"
-        />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/roll_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:padding="18dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="-10dp"
-        />
+        <EditText
+            android:id="@+id/roll_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:autofillHints=""
+            android:background="@drawable/rounded_corner"
+            android:ems="10"
+            android:hint="ROLL"
+            android:inputType="number"
+            android:padding="18dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Registeration No. :"
-        android:padding="18dp"
-        android:textColorHint="@color/white"
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        />
+        <Button
+            android:id="@+id/show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@drawable/button_background_reverse"
+            android:ems="8"
+            android:padding="10dp"
+            android:text="Show Details"
+            android:textColor="@drawable/button_text_focus_reverse"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/roll_registeration"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:padding="18dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="DOB :"
-        android:padding="18dp"
-        android:textColorHint="@color/white"
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="150dp"
-        />
+        <LinearLayout
+            android:id="@+id/roll_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
 
-    <TextView
-        android:id="@+id/roll_dob"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:padding="18dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="200dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="Name :"
+                android:paddingLeft="18dp"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
 
-</FrameLayout>
+            <TextView
+                android:id="@+id/roll_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner"
+                android:padding="18dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="Registeration No. :"
+                android:paddingLeft="18dp"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/roll_registeration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner"
+                android:longClickable="true"
+                android:padding="18dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="Aadhaar No. :"
+                android:paddingLeft="18dp"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/roll_aadhaar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner"
+                android:padding="18dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="Mobile No. :"
+                android:paddingLeft="18dp"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/roll_mob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner"
+                android:padding="18dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="ROLL Number :"
+                android:paddingLeft="18dp"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/roll_sem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:hint="SEM 1 :"
+                        android:paddingLeft="18dp"
+                        android:textColorHint="@color/white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/roll_sem1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_corner"
+                        android:padding="15dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:hint="SEM 2 :"
+                        android:paddingLeft="18dp"
+                        android:textColorHint="@color/white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/roll_sem2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_corner"
+                        android:padding="15dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:hint="SEM 3 :"
+                        android:paddingLeft="18dp"
+                        android:textColorHint="@color/white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/roll_sem3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_corner"
+                        android:padding="15dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:hint="SEM 4 :"
+                        android:paddingLeft="18dp"
+                        android:textColorHint="@color/white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/roll_sem4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_corner"
+                        android:padding="15dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:hint="SEM 5 :"
+                        android:paddingLeft="18dp"
+                        android:textColorHint="@color/white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/roll_sem5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_corner"
+                        android:padding="15dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="Father's Name :"
+                android:paddingLeft="18dp"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/roll_fname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner"
+                android:padding="18dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="Mother's Name :"
+                android:paddingLeft="18dp"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/roll_mname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner"
+                android:padding="18dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="Gender :"
+                android:paddingLeft="18dp"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/roll_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner"
+                android:padding="18dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="DOB :"
+                android:paddingLeft="18dp"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/roll_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner"
+                android:padding="18dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="Address :"
+                android:paddingLeft="18dp"
+                android:textColorHint="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/roll_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_corner"
+                android:padding="18dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
