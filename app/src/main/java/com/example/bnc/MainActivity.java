@@ -1,10 +1,8 @@
 package com.example.bnc;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
@@ -24,8 +22,6 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.Objects;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -54,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         useremail=headerView.findViewById(R.id.user_email);
         userimage=headerView.findViewById(R.id.userimage);
 
-//        userimage.setImageResource(R.drawable.icon_account_center);
+        userimage.setImageResource(R.drawable.image1);
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
