@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageButton buttonDrawerToggle;
     NavigationView navigationView;
-    TextView username,useremail;
+    TextView username, useremail;
     ImageView userimage;
-
+    ImageButton back;
     ImageButton logout_btn;
     private static final String MSG_TOKEN_FMT = "Token: %s";
 //    Button logout_btn;
@@ -56,10 +56,12 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerlayout);
         buttonDrawerToggle = findViewById(R.id.buttondrawertoggle);
         navigationView = findViewById(R.id.navigationview);
+        logout_btn = findViewById(R.id.logout_btn);
+        back = findViewById(R.id.back_btn);
         View headerView = navigationView.getHeaderView(0);
-        username=headerView.findViewById(R.id.user_name);
-        useremail=headerView.findViewById(R.id.user_email);
-        userimage=headerView.findViewById(R.id.userimage);
+        username = headerView.findViewById(R.id.user_name);
+        useremail = headerView.findViewById(R.id.user_email);
+        userimage = headerView.findViewById(R.id.userimage);
 
         userimage.setImageResource(R.drawable.image1);
 
@@ -131,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        logout_btn = findViewById(R.id.logout_btn);
 
         logout_btn.setOnClickListener(v -> {
             Toast.makeText(this, "Logged Out!!", Toast.LENGTH_SHORT).show();
@@ -142,6 +143,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         buttonDrawerToggle.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
+
+        back.setOnClickListener(v ->
+                onBackPressed()
+        );
 
         navigationView.setNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
@@ -179,7 +184,22 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
-       
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Check if there are any fragments in the back stack
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            // Pop the back stack to navigate to the previous fragment
+            button_visibility();
+            fragmentManager.popBackStack();
+        } else {
+            // If there are no fragments in the back stack, proceed with the default behavior
+            button_visibility();
+            super.onBackPressed();
+        }
     }
 
     // Function to set top margin
@@ -206,6 +226,17 @@ public class MainActivity extends AppCompatActivity {
                 String[] NOTIF_PERM = {Manifest.permission.POST_NOTIFICATIONS};
                 ActivityCompat.requestPermissions(this, NOTIF_PERM, 100);
             }
+        }
+    }
+
+    private void button_visibility() {
+        ImageButton logout = findViewById(R.id.logout_btn);
+        ImageButton toggle = findViewById(R.id.buttondrawertoggle);
+        ImageButton back = findViewById(R.id.back_btn);
+        if (logout != null) logout.setVisibility(View.VISIBLE);
+        if (toggle != null) {
+            toggle.setVisibility(View.VISIBLE);
+            back.setVisibility(View.GONE);
         }
     }
 
