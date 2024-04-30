@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item android:drawable="@color/orange"/>-->
+
+    <item>
+        <rotate
+            android:fromDegrees="45"
+            android:toDegrees="45"
+            android:pivotX="60%"
+            android:pivotY="-50%">
+            <shape
+                android:shape="rectangle">
+                <gradient
+                    android:endColor="@color/blue"
+                    android:startColor="@color/blue_tint"
+                    android:centerColor="@color/light_orange"
+                   />
+            </shape>
+        </rotate>
+    </item>
+
+    <item android:left="200dp" android:right="-100dp">
+        <rotate
+            android:fromDegrees="45"
+            android:toDegrees="45"
+            android:pivotX="60%"
+            android:pivotY="-50%">
+            <shape
+                android:shape="rectangle">
+                <gradient
+                    android:endColor="@color/blue"
+                    android:startColor="@color/blue_tint"
+                    android:centerColor="@color/light_orange"
+                    />
+            </shape>
+        </rotate>
+    </item>
+    <item android:right="100dp" android:left="-200dp">
+        <rotate
+            android:fromDegrees="45"
+            android:toDegrees="45"
+            android:pivotX="60%"
+            android:pivotY="-50%">
+            <shape
+                android:shape="rectangle">
+                <gradient
+                    android:endColor="@color/blue"
+                    android:startColor="@color/blue_tint"
+                    android:centerColor="@color/light_orange"
+                    />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>
