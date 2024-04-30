@@ -1,874 +1,758 @@
 <!-- activity_main.xml --><!-- activity_main.xml -->
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <!-- Add your layout content here -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
-
-    <!-- Main Heading -->
-    <TextView
-        android:id="@+id/main_heading"
-        style="@style/MainHeadingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Science"/>
-
-    <!-- Colored Underline -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:background="@drawable/underline_bg" />
-
-    <!-- Table-like structure -->
-    <!-- Header Row -->
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:ignore="RedundantNamespace">
+
+        <!-- Main Heading -->
+        <TextView
+            android:id="@+id/main_heading"
+            style="@style/MainHeadingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="Science" />
+
+        <!-- Colored Underline -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/underline_bg" />
+
+        <!-- Table-like structure -->
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Course" />
+
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Intake" />
+        </LinearLayout>
+
+        <!-- Rows -->
+        <!-- Physics Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Science (Honours) - Physics" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="180" />
+        </LinearLayout>
+
+        <!-- Chemistry Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Science (Honours) - Chemistry" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <!-- Add more rows here -->
+        <!-- Mathematics Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Science (Honours) - Mathematics" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="50+45" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Science (Honours) - Botany" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="40" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Science (Honours) - Zoology" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Science (Honours) - Geology" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Science (Honours) - Statistics" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
 
         <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
+            android:id="@+id/main_heading1"
+            style="@style/MainHeadingText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Sr. No." />
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="Language" />
+
+        <!-- Colored Underline -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/underline_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - Hindi" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="35" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - English" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - Sanskrit" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - Urdu" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - Maithili" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
 
         <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
+            android:id="@+id/main_heading2"
+            style="@style/MainHeadingText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Department Name" />
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="Social Science" />
+
+        <!-- Colored Underline -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/underline_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - Geography" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - History" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - Economics" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - Political Science" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - Psychology" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/border_bg"-->
+<!--            android:orientation="horizontal">-->
+
+
+<!--            &lt;!&ndash; Department Name &ndash;&gt;-->
+<!--            <TextView-->
+<!--                style="@style/TableText"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="5"-->
+<!--                android:background="@drawable/border_bg"-->
+<!--                android:text="Mathematics" />-->
+
+<!--            &lt;!&ndash; Intake &ndash;&gt;-->
+<!--            <TextView-->
+<!--                style="@style/TableText"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="120" />-->
+<!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - Philosophy" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/border_bg"-->
+<!--            android:orientation="horizontal">-->
+
+
+<!--            &lt;!&ndash; Department Name &ndash;&gt;-->
+<!--            <TextView-->
+<!--                style="@style/TableText"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="5"-->
+<!--                android:background="@drawable/border_bg"-->
+<!--                android:text="Statistics" />-->
+
+<!--            &lt;!&ndash; Intake &ndash;&gt;-->
+<!--            <TextView-->
+<!--                style="@style/TableText"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="120" />-->
+<!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Arts (Honours) - Sociology" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
 
         <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
+            android:id="@+id/main_heading3"
+            style="@style/MainHeadingText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Intake" />
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="Vocational Courses" />
+
+        <!-- Colored Underline -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/underline_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Biotechnology" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Functional English" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/border_bg"-->
+<!--            android:orientation="horizontal">-->
+
+
+<!--            &lt;!&ndash; Department Name &ndash;&gt;-->
+<!--            <TextView-->
+<!--                style="@style/TableText"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="5"-->
+<!--                android:background="@drawable/border_bg"-->
+<!--                android:text="Gemmology" />-->
+
+<!--            &lt;!&ndash; Intake &ndash;&gt;-->
+<!--            <TextView-->
+<!--                style="@style/TableText"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="120" />-->
+<!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Business Administration" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bg"
+            android:orientation="horizontal">
+
+
+            <!-- Department Name -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@drawable/border_bg"
+                android:text="Bachelor of Computer Applications" />
+
+            <!-- Intake -->
+            <TextView
+                style="@style/TableText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60" />
+        </LinearLayout>
+        <!-- Add more rows as needed -->
+
     </LinearLayout>
-
-    <!-- Rows -->
-    <!-- Physics Row -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="1" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Physics" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="60" />
-    </LinearLayout>
-
-    <!-- Chemistry Row -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="2" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Chemistry" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="60" />
-    </LinearLayout>
-
-    <!-- Add more rows here -->
-    <!-- Mathematics Row -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="3" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Mathematics" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="4" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Botany" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="5" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Zoology" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="6" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Geology" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="7" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Statistics" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/main_heading1"
-        style="@style/MainHeadingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Language"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="1" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Hindi
-" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="2" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="English" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="3" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Sanskrit" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="4" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Urdu" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="5" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Maithili" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/main_heading2"
-        style="@style/MainHeadingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Social Science"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="1" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Geography" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="2" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="History" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="3" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Economics" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="4" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Political Science" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="5" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Psychology" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="6" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Mathematics" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="7" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Philosophy
-" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="8" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Statistics" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="9" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Sociology" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <TextView
-        android:id="@+id/main_heading3"
-        style="@style/MainHeadingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Vocational Courses"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="1" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Biotechnology" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="2" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Functional English" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="3" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Gemmology" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="4" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="BBA" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/border_bg">
-
-        <!-- Sr. No. -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="5" />
-
-        <!-- Department Name -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="BCA" />
-
-        <!-- Intake -->
-        <TextView
-            style="@style/TableText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="120" />
-    </LinearLayout>
-    <!-- Add more rows as needed -->
-
-</LinearLayout>
 </ScrollView>
