@@ -17,7 +17,7 @@ import org.xmlpull.v1.XmlPullParser;
 public class physicsfragment extends Fragment {
 
     View root;
-    TextView text,text1,textview3;
+    TextView text,text1;
     ScrollView scrollView;
     LinearLayout linearLayout;
 

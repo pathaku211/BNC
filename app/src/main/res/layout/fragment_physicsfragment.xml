@@ -71,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:background="@drawable/rounded_corner"
+                    android:background="@drawable/arrow_background"
                     >
 
                     <androidx.cardview.widget.CardView
@@ -99,7 +99,7 @@
                         >
                         <TextView
                             android:id="@+id/textview1"
-                            android:layout_width="match_parent"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:text="@string/dr_rajkishore_prasad"
                             android:textStyle="bold"
@@ -110,10 +110,10 @@
                             />
                         <TextView
                             android:id="@+id/textview2"
-                            android:layout_width="match_parent"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:text="@string/principal"
-                            android:textStyle="bold"
+
                             />
 
                     </LinearLayout>
@@ -123,8 +123,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/rounded_corner"
-                    android:orientation="horizontal"
+                    android:background="@drawable/arrow_background"
                     >
 
                     <androidx.cardview.widget.CardView
@@ -150,7 +149,7 @@
                         >
                         <TextView
                             android:id="@+id/textview4"
-                            android:layout_width="match_parent"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:text="@string/dr_dinesh_kumar"
                             android:textStyle="bold"
@@ -161,10 +160,9 @@
                             />
                         <TextView
                             android:id="@+id/textview5"
-                            android:layout_width="match_parent"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:text="@string/assistant_professor"
-                            android:textStyle="bold"
                             />
 
                     </LinearLayout>
@@ -174,7 +172,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/rounded_corner"
+                    android:background="@drawable/arrow_background"
                     android:orientation="horizontal"
                     >
                     <androidx.cardview.widget.CardView
@@ -201,7 +199,7 @@
                         >
                         <TextView
                             android:id="@+id/textview7"
-                            android:layout_width="match_parent"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:text="@string/dr_raghwendra_kumar"
                             android:textStyle="bold"
@@ -212,10 +210,9 @@
                             />
                         <TextView
                             android:id="@+id/textview8"
-                            android:layout_width="match_parent"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:text="@string/assistant_professor"
-                            android:textStyle="bold"
                             />
 
                     </LinearLayout>
@@ -225,7 +222,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/rounded_corner"
+                    android:background="@drawable/arrow_background"
                     android:orientation="horizontal"
                     >
                     <androidx.cardview.widget.CardView
@@ -252,7 +249,7 @@
                         >
                         <TextView
                             android:id="@+id/textview10"
-                            android:layout_width="match_parent"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:text="@string/dr_manish_anand"
                             android:textStyle="bold"
@@ -263,10 +260,9 @@
                             />
                         <TextView
                             android:id="@+id/textview11"
-                            android:layout_width="match_parent"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:text="@string/assistant_professor"
-                            android:textStyle="bold"
                             />
                     </LinearLayout>
 
@@ -276,7 +272,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/rounded_corner"
+                    android:background="@drawable/arrow_background"
                     android:orientation="horizontal"
                     >
                     <androidx.cardview.widget.CardView
@@ -302,7 +298,7 @@
                         >
                         <TextView
                             android:id="@+id/textview13"
-                            android:layout_width="match_parent"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:text="@string/mr_mukesh_chandra_bos"
                             android:textStyle="bold"
@@ -314,12 +310,9 @@
                             />
                         <TextView
                             android:id="@+id/textview14"
-                            android:layout_gravity="end"
-                            android:layout_width="match_parent"
+                            android:layout_width="160dp"
                             android:layout_height="wrap_content"
                             android:text="@string/assistant_professor_hod"
-                            android:textStyle="bold"
-                            android:textSize="14sp"
                             />
                     </LinearLayout>
                 </LinearLayout>
@@ -362,7 +355,7 @@
             android:layout_gravity="center_vertical"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/arrow_background"
             />
 
     </LinearLayout>

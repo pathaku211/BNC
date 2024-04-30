@@ -7,58 +7,56 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link mathematicsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class mathematicsFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    View root;
+    TextView text,text1;
+    ScrollView scrollView;
+    LinearLayout linearLayout;
 
     public mathematicsFragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment mathematicsFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static mathematicsFragment newInstance(String param1, String param2) {
-        mathematicsFragment fragment = new mathematicsFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mathematics, container, false);
+        root = inflater.inflate(R.layout.fragment_mathematics, container, false);
+        text = root.findViewById(R.id.text);
+        text1 = root.findViewById(R.id.text1);
+        scrollView = root.findViewById(R.id.scroll_view);
+        linearLayout = root.findViewById(R.id.line);
+
+        text.setOnClickListener(v -> {
+            load_content(text, scrollView, text1);
+        });
+        text1.setOnClickListener(v -> {
+            load_content(text1, linearLayout, text);
+        });
+        return root;
+    }
+    boolean slide=true;
+    private void load_content(View textview , View text_view ,View another_textview) {
+        if (slide) {
+            slide = false;
+            textview.animate().scaleX(0.2f).setDuration(10).start();
+            textview.animate().translationX(-text.getWidth() / 2).setDuration(400).start();
+            another_textview.setVisibility(View.GONE);
+            text_view.setVisibility(View.VISIBLE);
+            text_view.setTranslationX(text_view.getWidth());
+            text_view.animate().translationX(140).setDuration(400).start();
+        } else {
+            slide = true;
+            textview.animate().scaleX(1f).setDuration(400).start();
+            textview.animate().translationX(0).setDuration(400).start();
+            another_textview.setVisibility(View.VISIBLE);
+            text_view.setVisibility(View.GONE);
+        }
     }
 }
