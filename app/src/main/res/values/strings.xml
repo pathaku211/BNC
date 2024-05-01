@@ -63,6 +63,39 @@
     <string name="bachelor_of_science_honors_physics">Bachelor of Science(Honors) - Physics</string>
     <string name="syllabus">Syllabus</string>
     <string name="faculty_member">Faculty Member</string>
+    <string name="associate_professor_head_of_department"><![CDATA[Associate professor & Head of Department]]></string>
+    <string name="dr_md_faiyaz_ahsan">Dr. Md. Faiyaz Ahsan</string>
+    <string name="university_professor_head_of_the_department"><![CDATA[University Professor & Head of the Department]]></string>
+    <string name="dr_irshad_ali">Dr. Irshad Ali</string>
+    <string name="dr_shailendra">Dr. Shailendra</string>
+    <string name="university_professor">University Professor</string>
+    <string name="dr_ashutosh_kumar">Dr. Ashutosh Kumar</string>
+    <string name="dr_kumar_krishnanand">Dr. Kumar Krishnanand</string>
+    <string name="dr_vinod_prasad">Dr. Vinod Prasad</string>
+    <string name="dr_rajeev_kumar">Dr. Rajeev Kumar</string>
+    <string name="guest_faculty_assistant_professor">Guest Faculty(Assistant Professor)</string>
+    <string name="dr_devanand_kumar">Dr. Devanand Kumar</string>
+    <string name="dr_praveen_kumar">Dr. Praveen Kumar</string>
+    <string name="assistant_professor_head_of_department">Assistant Professor(Head of Department)</string>
+    <string name="dr_dileep_kumar">Dr. Dileep Kumar</string>
+    <string name="associate_professor">Associate Professor</string>
+    <string name="kundan_patel">Kundan Patel</string>
+    <string name="guest_faculty">Guest Faculty</string>
+    <string name="mr_chandeswar_yadav">Mr. Chandeswar Yadav</string>
+    <string name="dr_amit_kumar">Dr. Amit Kumar</string>
+    <string name="dr_ashutosh_pandey">Dr. Ashutosh Pandey</string>
+    <string name="dr_md_sarwar_alam">Dr. Md Sarwar Alam</string>
+    <string name="dr_akhileshwar_tiwari">Dr. Akhileshwar Tiwari</string>
+    <string name="dr_ram_bali_singh">Dr. Ram Bali Singh</string>
+    <string name="professor">Professor</string>
+    <string name="dr_ranvir_nandan">Dr. Ranvir Nandan</string>
+    <string name="dr_abhay_prakash">Dr. Abhay Prakash</string>
+    <string name="demonstrator">Demonstrator</string>
+    <string name="dr_sunil_kumar_singh">Dr. Sunil Kumar Singh</string>
+    <string name="dr_urmi_dutta">Dr. Urmi Dutta</string>
+    <string name="dr_shashi_bhushan_rai">Dr. Shashi Bhushan Rai</string>
+    <string name="dr_abhishek_kumar_sharma">Dr. Abhishek Kumar Sharma</string>
+    <string name="dr_murari_sharma_manglik">Dr. Murari Sharma Manglik</string>
 
 
 </resources>
