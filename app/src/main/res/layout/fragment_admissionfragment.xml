@@ -6,12 +6,12 @@
 
     <!-- Add your layout content here -->
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:ignore="RedundantNamespace">
+        android:background="@drawable/admissionbg4">
 
         <!-- Main Heading -->
         <TextView
@@ -19,15 +19,17 @@
             style="@style/MainHeadingText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:text="Science" />
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="20dp"
+            android:text="Science"
+            android:textColor="@color/black"
+            android:background="@android:color/transparent"/>
 
         <!-- Colored Underline -->
         <View
             android:layout_width="match_parent"
             android:layout_height="4dp"
-            android:background="@drawable/underline_bg" />
+            android:background="#B8D5D9"/>
 
         <!-- Table-like structure -->
         <!-- Header Row -->
@@ -43,6 +45,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
+                android:textColor="@color/black"
                 android:text="Course" />
 
             <TextView
@@ -50,6 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="Intake" />
         </LinearLayout>
 
@@ -69,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Science (Honours) - Physics" />
 
             <!-- Intake -->
@@ -77,6 +82,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="180" />
         </LinearLayout>
 
@@ -95,6 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Science (Honours) - Chemistry" />
 
             <!-- Intake -->
@@ -103,6 +110,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -122,6 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Science (Honours) - Mathematics" />
 
             <!-- Intake -->
@@ -130,6 +139,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="50+45" />
         </LinearLayout>
 
@@ -147,6 +157,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Science (Honours) - Botany" />
 
             <!-- Intake -->
@@ -155,6 +166,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="40" />
         </LinearLayout>
 
@@ -172,6 +184,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Science (Honours) - Zoology" />
 
             <!-- Intake -->
@@ -180,6 +193,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -197,6 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Science (Honours) - Geology" />
 
             <!-- Intake -->
@@ -205,6 +220,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -222,6 +238,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Science (Honours) - Statistics" />
 
             <!-- Intake -->
@@ -230,6 +247,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -238,15 +256,17 @@
             style="@style/MainHeadingText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
             android:text="Language" />
 
         <!-- Colored Underline -->
         <View
             android:layout_width="match_parent"
             android:layout_height="4dp"
-            android:background="@drawable/underline_bg" />
+            android:background="#B8D5D9" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -256,12 +276,14 @@
 
 
             <!-- Department Name -->
+
             <TextView
                 style="@style/TableText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - Hindi" />
 
             <!-- Intake -->
@@ -270,6 +292,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="35" />
         </LinearLayout>
 
@@ -287,6 +310,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - English" />
 
             <!-- Intake -->
@@ -295,6 +319,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -312,6 +337,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - Sanskrit" />
 
             <!-- Intake -->
@@ -320,6 +346,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -337,6 +364,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - Urdu" />
 
             <!-- Intake -->
@@ -345,6 +373,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -362,6 +391,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - Maithili" />
 
             <!-- Intake -->
@@ -370,6 +400,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -378,15 +409,17 @@
             style="@style/MainHeadingText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
             android:text="Social Science" />
 
         <!-- Colored Underline -->
         <View
             android:layout_width="match_parent"
             android:layout_height="4dp"
-            android:background="@drawable/underline_bg" />
+            android:background="#B8D5D9" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -402,6 +435,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - Geography" />
 
             <!-- Intake -->
@@ -410,6 +444,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -427,6 +462,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - History" />
 
             <!-- Intake -->
@@ -435,6 +471,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -452,6 +489,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - Economics" />
 
             <!-- Intake -->
@@ -460,6 +498,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -477,6 +516,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - Political Science" />
 
             <!-- Intake -->
@@ -485,6 +525,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -502,6 +543,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - Psychology" />
 
             <!-- Intake -->
@@ -510,6 +552,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -552,6 +595,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - Philosophy" />
 
             <!-- Intake -->
@@ -560,6 +604,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -602,6 +647,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Arts (Honours) - Sociology" />
 
             <!-- Intake -->
@@ -610,6 +656,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -618,15 +665,17 @@
             style="@style/MainHeadingText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/black"
             android:text="Vocational Courses" />
 
         <!-- Colored Underline -->
         <View
             android:layout_width="match_parent"
             android:layout_height="4dp"
-            android:background="@drawable/underline_bg" />
+            android:background="#B8D5D9" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -642,6 +691,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Biotechnology" />
 
             <!-- Intake -->
@@ -650,6 +700,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -667,6 +718,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Functional English" />
 
             <!-- Intake -->
@@ -675,6 +727,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -717,6 +770,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Business Administration" />
 
             <!-- Intake -->
@@ -725,6 +779,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
 
@@ -732,6 +787,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border_bg"
+            android:layout_marginBottom="50dp"
             android:orientation="horizontal">
 
 
@@ -742,6 +798,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@drawable/border_bg"
+                android:textColor="@color/black"
                 android:text="Bachelor of Computer Applications" />
 
             <!-- Intake -->
@@ -750,6 +807,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/black"
                 android:text="60" />
         </LinearLayout>
         <!-- Add more rows as needed -->

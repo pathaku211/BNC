@@ -25,7 +25,10 @@
         app:dividerInsetStart="20dp"
         app:headerLayout="@layout/drawer_header"
         app:itemIconPadding="30dp"
-        app:menu="@menu/drawer_items" />
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/drawer_items"
+        android:background="#fcfcfc"/>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
