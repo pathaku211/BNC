@@ -84,7 +84,7 @@ public class profilefragment extends Fragment {
     }
 
     Button show;
-    TextView roll_input, roll_name, roll_registeration, roll_dob, roll_aadhaar, roll_mob, roll_fname, roll_mname, roll_gender, roll_address,roll_sem1,roll_sem2,roll_sem3,roll_sem4,roll_sem5;
+    TextView roll_input, roll_name, roll_registeration, roll_dob, roll_aadhaar, roll_mob, roll_fname, roll_mname, roll_gender, roll_address, roll_sem1, roll_sem2, roll_sem3, roll_sem4, roll_sem5;
     LinearLayout roll_details;
 
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -133,7 +133,7 @@ public class profilefragment extends Fragment {
             recordData.put("timestamp", FieldValue.serverTimestamp());
 
             // Inside your code block where you set the document ID
-            SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyyHHmmss", Locale.getDefault());
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault());
             String documentId = sdf.format(new Date());
 
             FirebaseFirestore.getInstance().collection("fetchrecords")
