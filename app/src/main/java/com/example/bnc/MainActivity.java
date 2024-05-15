@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.view.WindowInsets;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,13 +45,31 @@ public class MainActivity extends AppCompatActivity {
     ImageButton back;
     ImageButton logout_btn;
     private static final String MSG_TOKEN_FMT = "Token: %s";
-//    Button logout_btn;
+    ProgressBar progressBar;
+    //    Button logout_btn;
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser == null) {
+            // User is not signed in, redirect to login activity
+            Intent intent = new Intent(MainActivity.this, Login.class);
+            startActivity(intent);
+            finish(); // Prevent returning to MainActivity when pressing back button from LoginActivity
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.VISIBLE); // Show the progress bar when fetching begins
 
         replaceFragment(new homefragment());
         drawerLayout = findViewById(R.id.drawerlayout);
@@ -67,38 +86,18 @@ public class MainActivity extends AppCompatActivity {
 
         checkNotificationPermission();
 
-
-        FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(new OnCompleteListener<String>() {
-                    @Override
-                    public void onComplete(@NonNull Task<String> task) {
-                        if (!task.isSuccessful()) {
-                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
-                            return;
-                        }
-
-                        // Get new FCM registration token
-                        String token = task.getResult();
-
-                        // Log and toast
-                        String msg = String.format(MSG_TOKEN_FMT, token);
-                        Log.d(TAG, msg);
-                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-        FirebaseMessaging.getInstance().subscribeToTopic("notice")
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        String msg = "Subscribed";
-                        if (!task.isSuccessful()) {
-                            msg = "Subscribe failed";
-                        }
-                        Log.d(TAG, msg);
-                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-                    }
-                });
+//        FirebaseMessaging.getInstance().subscribeToTopic("notice")
+//                .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<Void> task) {
+//                        String msg = "Subscribed";
+//                        if (!task.isSuccessful()) {
+//                            msg = "Subscribe failed";
+//                        }
+//                        Log.d(TAG, msg);
+//                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+//                    }
+//                });
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -185,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
+        progressBar.setVisibility(View.GONE); // Hide the progress bar
     }
 
     @Override

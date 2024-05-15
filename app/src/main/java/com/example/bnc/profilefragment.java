@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.ClipboardManager;
@@ -84,8 +85,9 @@ public class profilefragment extends Fragment {
     }
 
     Button show;
-    TextView roll_input, roll_name, roll_registeration, roll_dob, roll_aadhaar, roll_mob, roll_fname, roll_mname, roll_gender, roll_address, roll_sem1, roll_sem2, roll_sem3, roll_sem4, roll_sem5;
+    TextView roll_input, roll_name, roll_registeration, roll_dob, roll_aadhaar, roll_mob, roll_fname, roll_mname, roll_gender, roll_address, roll_sem1, roll_sem2, roll_sem3, roll_sem4, roll_sem5,roll_sem6;
     LinearLayout roll_details;
+    ProgressBar progressBar;
 
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -110,14 +112,17 @@ public class profilefragment extends Fragment {
         roll_sem3 = v.findViewById(R.id.roll_sem3);
         roll_sem4 = v.findViewById(R.id.roll_sem4);
         roll_sem5 = v.findViewById(R.id.roll_sem5);
+        roll_sem6 = v.findViewById(R.id.roll_sem6);
         roll_fname = v.findViewById(R.id.roll_fname);
         roll_mname = v.findViewById(R.id.roll_mname);
         roll_gender = v.findViewById(R.id.roll_gender);
         roll_dob = v.findViewById(R.id.roll_dob);
         roll_address = v.findViewById(R.id.roll_address);
+        progressBar = v.findViewById(R.id.progressBar);
 
 
         show.setOnClickListener(v1 -> {
+            progressBar.setVisibility(View.VISIBLE); // Show the progress bar when fetching begins
             String roll = roll_input.getText().toString();
             // Check if the first character is '0'
             if (roll.startsWith("0")) {
@@ -133,7 +138,7 @@ public class profilefragment extends Fragment {
             recordData.put("timestamp", FieldValue.serverTimestamp());
 
             // Inside your code block where you set the document ID
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault());
+            SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyyHHmmss", Locale.getDefault());
             String documentId = sdf.format(new Date());
 
             FirebaseFirestore.getInstance().collection("fetchrecords")
@@ -160,6 +165,7 @@ public class profilefragment extends Fragment {
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            progressBar.setVisibility(View.GONE); // Hide the progress bar when fetching completes
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
 //                                    Log.d("name", document.getId() + " => " + document.getString("NAME") + " => " + document.getData());
@@ -182,6 +188,7 @@ public class profilefragment extends Fragment {
                                     roll_sem3.setText(document.getString("TERM3"));
                                     roll_sem4.setText(document.getString("TERM4"));
                                     roll_sem5.setText(document.getString("TERM5"));
+                                    roll_sem6.setText(document.getString("TERM6"));
                                     roll_fname.setText(document.getString("FNAME"));
                                     roll_mname.setText(document.getString("MNAME"));
                                     roll_gender.setText(document.getString("GENDER"));
@@ -207,6 +214,7 @@ public class profilefragment extends Fragment {
                                     setCopyTextView(roll_sem3);
                                     setCopyTextView(roll_sem4);
                                     setCopyTextView(roll_sem5);
+                                    setCopyTextView(roll_sem6);
                                     setCopyTextView(roll_address);
 
                                 }
