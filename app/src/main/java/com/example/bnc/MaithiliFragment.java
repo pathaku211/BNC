@@ -1,5 +1,7 @@
 package com.example.bnc;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,11 +10,13 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -49,6 +53,24 @@ public class MaithiliFragment extends Fragment {
         imageList.add(new SlideModel(R.drawable.bn_college8, ScaleTypes.CENTER_CROP));
         imageList.add(new SlideModel(R.drawable.bn_college9, ScaleTypes.CENTER_CROP));
         image.setImageList(imageList);
+
+        Button textLoad = root.findViewById(R.id.text_load);
+        textLoad.setOnClickListener(v -> {
+            // Define the URL you want to open
+            String url = "https://www.bncollegepatna.com/department_login/files/#";
+
+            // Create an Intent with the ACTION_VIEW action and the URL as the data
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+
+            // Check if there is an Activity available to handle the Intent
+            if (intent.resolveActivity(requireActivity().getPackageManager()) != null) {
+                // Start the activity to open the URL
+                startActivity(intent);
+            } else {
+                // If no Activity is available to handle the Intent, show a toast or perform any other action
+                Toast.makeText(requireContext(), "No app found to open the URL", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         text.setOnClickListener(v -> {
             load_content(text, linelayout, text1);
