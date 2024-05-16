@@ -9,9 +9,9 @@
             android:icon="@drawable/home"
             />
         <item
-            android:id="@+id/menu_about"
-            android:title="@string/menu_about"
-            android:icon="@drawable/about"
+            android:id="@+id/menu_gallery"
+            android:title="GALLERY"
+            android:icon="@drawable/gallery"
            />
 <!--        <item-->
 <!--            android:id="@+id/menu_gallery"-->
@@ -60,7 +60,13 @@
 <!--        android:title="@string/menu_feedback" />-->
 
     <item
+        android:id="@+id/menu_about"
+        android:title="ABOUT"
+        android:icon="@drawable/about"/>
+
+    <item
         android:id="@+id/menu_logout"
         android:title="@string/menu_logout"
         android:icon="@drawable/logout"/>
+
 </menu>

@@ -1,5 +1,7 @@
 package com.example.bnc;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,58 +9,50 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link aboutfragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class aboutfragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    View root;
+    TextView text,text1,text2,text3;
 
     public aboutfragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment aboutfragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static aboutfragment newInstance(String param1, String param2) {
-        aboutfragment fragment = new aboutfragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_aboutfragment, container, false);
+       root= inflater.inflate(R.layout.fragment_aboutfragment, container, false);
+
+        text=root.findViewById(R.id.text1);
+        text1=root.findViewById(R.id.text2);
+        text2=root.findViewById(R.id.text3);
+        text3=root.findViewById(R.id.text4);
+
+        text.setOnClickListener(v->{
+            link("https://www.linkedin.com/in/umesh-pathak-07a73b192?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app");
+        });
+
+        text1.setOnClickListener(v->{
+            link("https://www.linkedin.com/in/karan-krishna-8185552a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app");
+        });
+
+        text2.setOnClickListener(v->{
+            link("https://www.linkedin.com/in/ashish-kumar-579b621a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app");
+        });
+
+        text3.setOnClickListener(v->{
+            link("https://www.linkedin.com/in/pragya-rai-2a696a309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app");
+        });
+
+        return root;
+    }
+    private void link(String linkedinurl){
+        Intent intent =new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(linkedinurl));
+        startActivity(intent);
     }
 }

@@ -11,20 +11,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Objects;
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+
+import java.util.ArrayList;
 
 public class bcaFragment extends Fragment {
 
     View root;
-    TextView text, text1;
+    TextView text,text1;
     ScrollView scrollView;
     LinearLayout linearLayout;
-
+    ImageSlider image;
 
     public bcaFragment() {
         // Required empty public constructor
@@ -34,11 +37,20 @@ public class bcaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        root = inflater.inflate(R.layout.fragment_bca, container, false);
-        text = root.findViewById(R.id.text);
-        text1 = root.findViewById(R.id.text1);
-        scrollView = root.findViewById(R.id.scroll_view);
-        linearLayout = root.findViewById(R.id.line);
+        root= inflater.inflate(R.layout.fragment_bca, container, false);
+        text=root.findViewById(R.id.text);
+        text1=root.findViewById(R.id.text1);
+        scrollView=root.findViewById(R.id.scroll_view);
+        linearLayout=root.findViewById(R.id.line);
+
+        image = root.findViewById(R.id.image_slider);
+
+        ArrayList<SlideModel> imageList = new ArrayList<>();
+        imageList.add(new SlideModel(R.drawable.bca_depart, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college10, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college2, ScaleTypes.CENTER_CROP));
+        image.setImageList(imageList);
+
 
         Button textLoad = root.findViewById(R.id.text_load);
         textLoad.setOnClickListener(v -> {
@@ -59,29 +71,26 @@ public class bcaFragment extends Fragment {
         });
 
 
-
-        text.setOnClickListener(v -> {
-            load_content(text, scrollView, text1);
+        text.setOnClickListener(v->{
+            load_content(text,scrollView,text1);
         });
-        text1.setOnClickListener(v -> {
-            load_content(text1, linearLayout, text);
+        text1.setOnClickListener(v->{
+            load_content(text1,linearLayout,text);
         });
         return root;
     }
-
-    boolean slide = true;
-
-    private void load_content(View textview, View text_view, View another_textview) {
-        if (slide) {
-            slide = false;
+    boolean slide=true;
+    private void load_content(View textview , View text_view ,View another_textview){
+        if(slide){
+            slide=false;
             textview.animate().scaleX(0.2f).setDuration(10).start();
-            textview.animate().translationX(-text.getWidth() / 2).setDuration(400).start();
+            textview.animate().translationX(-text.getWidth()/2).setDuration(400).start();
             another_textview.setVisibility(View.GONE);
             text_view.setVisibility(View.VISIBLE);
             text_view.setTranslationX(text_view.getWidth());
             text_view.animate().translationX(140).setDuration(400).start();
-        } else {
-            slide = true;
+        }else{
+            slide=true;
             textview.animate().scaleX(1f).setDuration(400).start();
             textview.animate().translationX(0).setDuration(400).start();
             another_textview.setVisibility(View.VISIBLE);

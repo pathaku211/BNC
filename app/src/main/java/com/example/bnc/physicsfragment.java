@@ -15,7 +15,13 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+
 import org.xmlpull.v1.XmlPullParser;
+
+import java.util.ArrayList;
 
 
 public class physicsfragment extends Fragment {
@@ -24,6 +30,7 @@ public class physicsfragment extends Fragment {
     TextView text, text1;
     ScrollView scrollView;
     LinearLayout linearLayout;
+    ImageSlider image;
 
     public physicsfragment() {
         // Required empty public constructor
@@ -39,6 +46,14 @@ public class physicsfragment extends Fragment {
         text1 = root.findViewById(R.id.text1);
         scrollView = root.findViewById(R.id.scroll_view);
         linearLayout = root.findViewById(R.id.line);
+
+        image = root.findViewById(R.id.image_slider);
+
+        ArrayList<SlideModel> imageList = new ArrayList<>();
+        imageList.add(new SlideModel(R.drawable.chem_phys_depart, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.chem_phys_depart1, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.phys_depart, ScaleTypes.CENTER_CROP));
+        image.setImageList(imageList);
 
         Button textLoad = root.findViewById(R.id.text_load);
         textLoad.setOnClickListener(v -> {

@@ -11,10 +11,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+
+import java.util.ArrayList;
 
 
 public class MaithiliFragment extends Fragment {
@@ -22,6 +30,7 @@ public class MaithiliFragment extends Fragment {
     View root;
     TextView text,text1;
     LinearLayout linearLayout,linelayout;
+    ImageSlider image;
 
     public MaithiliFragment() {
         // Required empty public constructor
@@ -36,6 +45,14 @@ public class MaithiliFragment extends Fragment {
         text1 = root.findViewById(R.id.text1);
         linelayout = root.findViewById(R.id.line_layout);
         linearLayout = root.findViewById(R.id.line);
+
+        image = root.findViewById(R.id.image_slider);
+
+        ArrayList<SlideModel> imageList = new ArrayList<>();
+        imageList.add(new SlideModel(R.drawable.sans_depart, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college8, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college9, ScaleTypes.CENTER_CROP));
+        image.setImageList(imageList);
 
         Button textLoad = root.findViewById(R.id.text_load);
         textLoad.setOnClickListener(v -> {
@@ -81,4 +98,5 @@ public class MaithiliFragment extends Fragment {
             text_view.setVisibility(View.GONE);
         }
     }
+
 }

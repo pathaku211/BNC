@@ -1,6 +1,7 @@
 package com.example.bnc;
 
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -10,10 +11,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+
+import java.util.ArrayList;
 
 
 public class englishFragment extends Fragment {
@@ -21,6 +29,7 @@ public class englishFragment extends Fragment {
     TextView text,text1;
     ScrollView scrollView;
     LinearLayout linearLayout;
+    ImageSlider image;
 
     public englishFragment() {
         // Required empty public constructor
@@ -35,6 +44,13 @@ public class englishFragment extends Fragment {
         text1 = root.findViewById(R.id.text1);
         scrollView = root.findViewById(R.id.scroll_view);
         linearLayout = root.findViewById(R.id.line);
+        image = root.findViewById(R.id.image_slider);
+
+        ArrayList<SlideModel> imageList = new ArrayList<>();
+        imageList.add(new SlideModel(R.drawable.english_depart, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college1, ScaleTypes.CENTER_CROP));
+        image.setImageList(imageList);
 
         Button textLoad = root.findViewById(R.id.text_load);
         textLoad.setOnClickListener(v -> {
