@@ -15,12 +15,19 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+
+import java.util.ArrayList;
+
 
 public class UrduFragment extends Fragment {
 
     View root;
     TextView text,text1;
     LinearLayout linearLayout,linelayout;
+    ImageSlider image;
 
     public UrduFragment() {
         // Required empty public constructor
@@ -53,6 +60,14 @@ public class UrduFragment extends Fragment {
                 Toast.makeText(requireContext(), "No app found to open the URL", Toast.LENGTH_SHORT).show();
             }
         });
+
+        image = root.findViewById(R.id.image_slider);
+
+        ArrayList<SlideModel> imageList = new ArrayList<>();
+        imageList.add(new SlideModel(R.drawable.urdu_depart, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college2, ScaleTypes.CENTER_CROP));
+        image.setImageList(imageList);
 
         text.setOnClickListener(v -> {
             load_content(text, linelayout, text1);

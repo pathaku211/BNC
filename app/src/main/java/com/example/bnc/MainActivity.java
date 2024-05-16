@@ -1,8 +1,5 @@
 package com.example.bnc;
 
-import static android.Manifest.permission.POST_NOTIFICATIONS;
-import static android.content.ContentValues.TAG;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -18,7 +15,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
@@ -27,13 +23,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.messaging.FirebaseMessaging;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -154,9 +147,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Home Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new homefragment());
             }
-            if (itemId == R.id.menu_about) {
-                Toast.makeText(MainActivity.this, "About Clicked", Toast.LENGTH_SHORT).show();
-                replaceFragment(new aboutfragment());
+            if (itemId == R.id.menu_gallery) {
+                Toast.makeText(MainActivity.this, "Gallery Clicked", Toast.LENGTH_SHORT).show();
+                replaceFragment(new galleryFragment());
             }
             if (itemId == R.id.menu_profile) {
                 Toast.makeText(MainActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
@@ -169,6 +162,10 @@ public class MainActivity extends AppCompatActivity {
             if (itemId == R.id.menu_admission) {
                 Toast.makeText(MainActivity.this, "Admission Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new admissionfragment());
+            }
+            if (itemId == R.id.menu_about) {
+                Toast.makeText(MainActivity.this, "About Clicked", Toast.LENGTH_SHORT).show();
+                replaceFragment(new aboutfragment());
             }
             if (itemId == R.id.menu_logout) {
                 Toast.makeText(this, "Logged Out!!", Toast.LENGTH_SHORT).show();
