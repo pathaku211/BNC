@@ -34,12 +34,12 @@ public class homefragment extends Fragment {
 
         // Create image list for the slider
         ArrayList<SlideModel> imageList = new ArrayList<>();
-        imageList.add(new SlideModel(R.drawable.image1, "The animal population decreased by 58 percent in 42 years.", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.image2, "The animal population decreased by 58 percent in 42 years.", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.image3, "The animal population decreased by 58 percent in 42 years.", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.image4, "The animal population decreased by 58 percent in 42 years.", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.image5, "The animal population decreased by 58 percent in 42 years.", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.image6, "The animal population decreased by 58 percent in 42 years.", ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college2, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college1, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college9, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college13, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.bn_college3, ScaleTypes.CENTER_CROP));
 
         imageSlider.setImageList(imageList);
 
