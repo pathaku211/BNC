@@ -138,7 +138,7 @@ public class profilefragment extends Fragment {
             recordData.put("timestamp", FieldValue.serverTimestamp());
 
             // Inside your code block where you set the document ID
-            SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyyHHmmss", Locale.getDefault());
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault());
             String documentId = sdf.format(new Date());
 
             FirebaseFirestore.getInstance().collection("fetchrecords")
