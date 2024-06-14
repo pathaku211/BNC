@@ -112,7 +112,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.BNC_TOKEN }}
 
       - name: Upload Release Asset
-        if: success() && steps.create_or_update_release.outputs.upload_url != ''
+        if: success() && env.upload_url != ''
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_or_update_release.outputs.upload_url }}
