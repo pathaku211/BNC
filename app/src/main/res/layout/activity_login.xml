@@ -7,8 +7,7 @@
     android:background="@drawable/loginbg"
     android:gravity="center"
     android:padding="16dp"
-    tools:context=".Login"
-    >
+    tools:context=".Login">
 
     <!-- Progress Bar -->
     <ProgressBar
@@ -38,7 +37,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:autofillHints=""
-            android:background="@drawable/rounded_corner"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="10dp"
@@ -58,12 +56,11 @@
             app:passwordToggleTint="@color/black">
 
 
-        <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/login_password_input"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:autofillHints=""
-                android:background="@drawable/rounded_corner"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="10dp"

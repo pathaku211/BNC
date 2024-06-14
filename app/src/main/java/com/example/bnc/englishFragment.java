@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 public class englishFragment extends Fragment {
     View root;
-    TextView text,text1;
+    TextView text, text1;
     ScrollView scrollView;
     LinearLayout linearLayout;
     ImageSlider image;
@@ -78,8 +78,10 @@ public class englishFragment extends Fragment {
         });
         return root;
     }
-    boolean slide=true;
-    private void load_content(View textview , View text_view ,View another_textview) {
+
+    boolean slide = true;
+
+    private void load_content(View textview, View text_view, View another_textview) {
         if (slide) {
             slide = false;
             textview.animate().scaleX(0.2f).setDuration(10).start();

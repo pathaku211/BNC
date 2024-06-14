@@ -74,117 +74,117 @@ public class departmentsfragment extends Fragment {
 
             if (itemId == R.id.menu_physics) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Physics Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Physics Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new physicsfragment());
             }
             if (itemId == R.id.menu_chemistry) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Chemistry Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Chemistry Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new chemistryFragment());
             }
             if (itemId == R.id.menu_mathematics) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Mathematics Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Mathematics Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new mathematicsFragment());
             }
             if (itemId == R.id.menu_botany) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Botany Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Botany Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new botanyFragment());
             }
             if (itemId == R.id.menu_zoology) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Zoology Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Zoology Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new zoologyFragment());
             }
             if (itemId == R.id.menu_geology) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Geology Clicked", Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(rootView.getContext(), "Geology Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new geologyFragment());
             }
             if (itemId == R.id.menu_statistics) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Statistics Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Statistics Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new statisticsFragment());
             }
             if (itemId == R.id.menu_hindi) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Hindi Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Hindi Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new hindiFragment());
             }
             if (itemId == R.id.menu_english) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "English Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "English Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new englishFragment());
             }
             if (itemId == R.id.menu_sanskrit) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Sanskrit Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Sanskrit Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new sanskritFragment());
             }
             if (itemId == R.id.menu_urdu) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Urdu Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Urdu Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new UrduFragment());
             }
             if (itemId == R.id.menu_maithili) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Maithili Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Maithili Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new MaithiliFragment());
             }
             if (itemId == R.id.menu_geography) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Geography Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Geography Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new geographyFragment());
             }
             if (itemId == R.id.menu_history) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "History Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "History Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new historyFragment());
             }
             if (itemId == R.id.menu_economics) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Economics Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Economics Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new economicsFragment());
             }
             if (itemId == R.id.menu_politicalscience) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Pol_Science Clicked", Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(rootView.getContext(), "Pol_Science Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new political_scienceFragment());
             }
             if (itemId == R.id.menu_psychology) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Psychology Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Psychology Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new psychologyFragment());
             }
             if (itemId == R.id.menu_philosophy) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Pilosophy Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "Pilosophy Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new philosophyFragment());
             }
             if (itemId == R.id.menu_sociology) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Sociology Clicked", Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(rootView.getContext(), "Sociology Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new sociologyFragment());
             }
             if (itemId == R.id.menu_biotehnology) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Biotechnology Clicked", Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(rootView.getContext(), "Biotechnology Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new biotechnologyFragment());
             }
             if (itemId == R.id.menu_functionalenglish) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "Functional English Clicked", Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(rootView.getContext(), "Functional English Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new functionalenglishFragment());
             }
             if (itemId == R.id.menu_bba) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "BBA Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "BBA Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new bbaFragment());
             }
             if (itemId == R.id.menu_bca) {
                 showOtherViews(gridLayout);
-                Toast.makeText(rootView.getContext(), "BCA Clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(rootView.getContext(), "BCA Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new bcaFragment());
             }
             return true;

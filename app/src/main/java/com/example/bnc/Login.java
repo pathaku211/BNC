@@ -101,7 +101,6 @@ public class Login extends AppCompatActivity {
         });
 
 
-
         // Handle login button click
         loginBtn.setOnClickListener(v -> {
             // Check internet connectivity
@@ -157,7 +156,7 @@ public class Login extends AppCompatActivity {
                                         });
                             } else {
                                 // Email is not registered
-                                Toast.makeText(Login.this, email+" is not registered.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, email + " is not registered.", Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE); // Hide the progress bar
                             }
                         } else {

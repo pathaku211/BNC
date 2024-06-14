@@ -25,10 +25,11 @@ import java.util.ArrayList;
 public class zoologyFragment extends Fragment {
 
     View root;
-    TextView text,text1;
+    TextView text, text1;
     ScrollView scrollView;
     LinearLayout linearLayout;
     ImageSlider image;
+
     public zoologyFragment() {
         // Required empty public constructor
     }
@@ -77,18 +78,20 @@ public class zoologyFragment extends Fragment {
         });
         return root;
     }
-    boolean slide=true;
-    private void load_content(View textview , View text_view ,View another_textview){
-        if(slide){
-            slide=false;
+
+    boolean slide = true;
+
+    private void load_content(View textview, View text_view, View another_textview) {
+        if (slide) {
+            slide = false;
             textview.animate().scaleX(0.2f).setDuration(10).start();
-            textview.animate().translationX(-text.getWidth()/2).setDuration(400).start();
+            textview.animate().translationX(-text.getWidth() / 2).setDuration(400).start();
             another_textview.setVisibility(View.GONE);
             text_view.setVisibility(View.VISIBLE);
             text_view.setTranslationX(text_view.getWidth());
             text_view.animate().translationX(140).setDuration(400).start();
-        }else{
-            slide=true;
+        } else {
+            slide = true;
             textview.animate().scaleX(1f).setDuration(400).start();
             textview.animate().translationX(0).setDuration(400).start();
             another_textview.setVisibility(View.VISIBLE);

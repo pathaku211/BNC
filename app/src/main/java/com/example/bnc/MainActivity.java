@@ -144,27 +144,27 @@ public class MainActivity extends AppCompatActivity {
             int itemId = item.getItemId();
 
             if (itemId == R.id.menu_home) {
-                Toast.makeText(MainActivity.this, "Home Clicked", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Home Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new homefragment());
             }
             if (itemId == R.id.menu_gallery) {
-                Toast.makeText(MainActivity.this, "Gallery Clicked", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Gallery Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new galleryFragment());
             }
             if (itemId == R.id.menu_profile) {
-                Toast.makeText(MainActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new profilefragment());
             }
             if (itemId == R.id.menu_departments) {
-                Toast.makeText(MainActivity.this, "Departments Clicked", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Departments Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new departmentsfragment());
             }
             if (itemId == R.id.menu_admission) {
-                Toast.makeText(MainActivity.this, "Admission Clicked", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Admission Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new admissionfragment());
             }
             if (itemId == R.id.menu_about) {
-                Toast.makeText(MainActivity.this, "About Clicked", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "About Clicked", Toast.LENGTH_SHORT).show();
                 replaceFragment(new aboutfragment());
             }
             if (itemId == R.id.menu_logout) {

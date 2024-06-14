@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background"
+    android:background="@drawable/classbg2"
     tools:context=".physicsfragment"
     android:padding="10dp"
     tools:ignore="ExtraText">
@@ -38,11 +38,11 @@
             android:layout_height="wrap_content"
             android:minHeight="70dp"
             android:text="@string/faculty_member"
+            android:background="@drawable/rounded_corner"
             android:textSize="20sp"
             android:gravity="center"
             android:textColor="@color/black"
             android:layout_marginBottom="40dp"
-            android:background="@drawable/rounded_corner"
 
             />
         <TextView
@@ -51,10 +51,10 @@
             android:layout_height="wrap_content"
             android:minHeight="70dp"
             android:text="@string/syllabus"
+            android:background="@drawable/rounded_corner"
             android:textSize="20sp"
             android:gravity="center"
-            android:textColor="@color/black"
-            android:background="@drawable/rounded_corner"
+            android:textColor="@color/white"
             />
     </LinearLayout>
 

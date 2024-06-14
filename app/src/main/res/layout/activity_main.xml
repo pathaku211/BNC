@@ -36,7 +36,7 @@
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
         app:menu="@menu/drawer_items"
-        android:background="#fcfcfc"/>
+        android:background="#fcfcfc" />
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

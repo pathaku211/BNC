@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
+    android:background="@drawable/classbg"
     tools:context=".profilefragment">
 
     <!-- Progress Bar -->
@@ -46,13 +46,12 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="100dp"
                 android:autofillHints=""
-                android:background="@drawable/rounded_corner"
                 android:ems="10"
                 android:hint="ROLL"
                 android:inputType="number"
                 android:padding="18dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 android:textCursorDrawable="@drawable/cursor_drawable"
                 android:textSize="20sp"
                 tools:ignore="HardcodedText" />
@@ -85,7 +84,7 @@
                     android:layout_marginTop="10dp"
                     android:hint="Name :"
                     android:paddingLeft="18dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:textSize="24sp" />
 
                 <TextView
@@ -94,9 +93,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rounded_corner"
                     android:padding="18dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -106,7 +104,7 @@
                     android:layout_marginTop="10dp"
                     android:hint="Registeration No. :"
                     android:paddingLeft="18dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:textSize="24sp" />
 
                 <TextView
@@ -115,10 +113,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rounded_corner"
                     android:longClickable="true"
                     android:padding="18dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -128,7 +125,7 @@
                     android:layout_marginTop="10dp"
                     android:hint="Aadhaar No. :"
                     android:paddingLeft="18dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:textSize="24sp" />
 
                 <TextView
@@ -137,9 +134,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rounded_corner"
                     android:padding="18dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -149,7 +145,7 @@
                     android:layout_marginTop="10dp"
                     android:hint="Mobile No. :"
                     android:paddingLeft="18dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:textSize="24sp" />
 
                 <TextView
@@ -158,9 +154,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rounded_corner"
                     android:padding="18dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -170,7 +165,7 @@
                     android:layout_marginTop="10dp"
                     android:hint="ROLL Number :"
                     android:paddingLeft="18dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:textSize="24sp" />
 
                 <LinearLayout
@@ -192,7 +187,7 @@
                             android:layout_marginRight="15dp"
                             android:hint="SEM 1 :"
                             android:paddingLeft="18dp"
-                            android:textColorHint="@color/white"
+                            android:textColorHint="@color/black"
                             android:textSize="24sp" />
 
                         <TextView
@@ -202,7 +197,7 @@
                             android:layout_marginTop="5dp"
                             android:background="@drawable/rounded_corner"
                             android:padding="15dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="20sp" />
                     </LinearLayout>
 
@@ -217,7 +212,7 @@
                             android:layout_marginRight="15dp"
                             android:hint="SEM 2 :"
                             android:paddingLeft="18dp"
-                            android:textColorHint="@color/white"
+                            android:textColorHint="@color/black"
                             android:textSize="24sp" />
 
                         <TextView
@@ -227,7 +222,7 @@
                             android:layout_marginTop="5dp"
                             android:background="@drawable/rounded_corner"
                             android:padding="15dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="20sp" />
                     </LinearLayout>
 
@@ -242,7 +237,7 @@
                             android:layout_marginRight="15dp"
                             android:hint="SEM 3 :"
                             android:paddingLeft="18dp"
-                            android:textColorHint="@color/white"
+                            android:textColorHint="@color/black"
                             android:textSize="24sp" />
 
                         <TextView
@@ -252,7 +247,7 @@
                             android:layout_marginTop="5dp"
                             android:background="@drawable/rounded_corner"
                             android:padding="15dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="20sp" />
                     </LinearLayout>
 
@@ -267,7 +262,7 @@
                             android:layout_marginRight="15dp"
                             android:hint="SEM 4 :"
                             android:paddingLeft="18dp"
-                            android:textColorHint="@color/white"
+                            android:textColorHint="@color/black"
                             android:textSize="24sp" />
 
                         <TextView
@@ -277,7 +272,7 @@
                             android:layout_marginTop="5dp"
                             android:background="@drawable/rounded_corner"
                             android:padding="15dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="20sp" />
                     </LinearLayout>
 
@@ -292,7 +287,7 @@
                             android:layout_marginRight="15dp"
                             android:hint="SEM 5 :"
                             android:paddingLeft="18dp"
-                            android:textColorHint="@color/white"
+                            android:textColorHint="@color/black"
                             android:textSize="24sp" />
 
                         <TextView
@@ -302,7 +297,7 @@
                             android:layout_marginTop="5dp"
                             android:background="@drawable/rounded_corner"
                             android:padding="15dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="20sp" />
                     </LinearLayout>
 
@@ -317,7 +312,7 @@
                             android:layout_marginRight="15dp"
                             android:hint="SEM 6 :"
                             android:paddingLeft="18dp"
-                            android:textColorHint="@color/white"
+                            android:textColorHint="@color/black"
                             android:textSize="24sp" />
 
                         <TextView
@@ -327,7 +322,7 @@
                             android:layout_marginTop="5dp"
                             android:background="@drawable/rounded_corner"
                             android:padding="15dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="20sp" />
                     </LinearLayout>
 
@@ -340,7 +335,7 @@
                     android:layout_marginTop="10dp"
                     android:hint="Father's Name :"
                     android:paddingLeft="18dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:textSize="24sp" />
 
                 <TextView
@@ -349,9 +344,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rounded_corner"
                     android:padding="18dp"
-                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -361,7 +356,7 @@
                     android:layout_marginTop="10dp"
                     android:hint="Mother's Name :"
                     android:paddingLeft="18dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:textSize="24sp" />
 
                 <TextView
@@ -370,9 +365,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rounded_corner"
                     android:padding="18dp"
-                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -382,7 +377,7 @@
                     android:layout_marginTop="10dp"
                     android:hint="Gender :"
                     android:paddingLeft="18dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:textSize="24sp" />
 
                 <TextView
@@ -391,9 +386,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rounded_corner"
                     android:padding="18dp"
-                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -403,7 +398,7 @@
                     android:layout_marginTop="10dp"
                     android:hint="DOB :"
                     android:paddingLeft="18dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:textSize="24sp" />
 
                 <TextView
@@ -412,9 +407,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rounded_corner"
                     android:padding="18dp"
-                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
                 <TextView
@@ -424,7 +419,7 @@
                     android:layout_marginTop="10dp"
                     android:hint="Address :"
                     android:paddingLeft="18dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:textSize="24sp" />
 
                 <TextView
@@ -433,9 +428,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rounded_corner"
                     android:padding="18dp"
-                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_corner"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
 
