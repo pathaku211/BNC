@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import android.view.Window;
 
 import androidx.fragment.app.Fragment;
@@ -24,7 +26,7 @@ public class homefragment extends Fragment {
     }
 
     @Override
-    public View onCreateView( LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_homefragment, container, false);
@@ -34,6 +36,7 @@ public class homefragment extends Fragment {
 
         // Create image list for the slider
         ArrayList<SlideModel> imageList = new ArrayList<>();
+        imageList.add(new SlideModel(R.drawable.image2, ScaleTypes.CENTER_CROP));
         imageList.add(new SlideModel(R.drawable.bn_college, ScaleTypes.CENTER_CROP));
         imageList.add(new SlideModel(R.drawable.bn_college2, ScaleTypes.CENTER_CROP));
         imageList.add(new SlideModel(R.drawable.bn_college1, ScaleTypes.CENTER_CROP));
@@ -56,7 +59,7 @@ public class homefragment extends Fragment {
         int mode = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
 
         //if it is in dark mode color will change
-        if(mode==android.content.res.Configuration.UI_MODE_NIGHT_YES){
+        if (mode == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
             requireActivity().getWindow().getDecorView().setBackgroundColor(Color.parseColor("#D0D0E3"));
         }
     }

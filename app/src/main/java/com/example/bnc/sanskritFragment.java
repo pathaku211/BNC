@@ -25,9 +25,10 @@ import java.util.ArrayList;
 public class sanskritFragment extends Fragment {
 
     View root;
-    TextView text,text1;
-    LinearLayout linearLayout,linelayout;
+    TextView text, text1;
+    LinearLayout linearLayout, linelayout;
     ImageSlider image;
+
     public sanskritFragment() {
         // Required empty public constructor
     }
@@ -39,7 +40,7 @@ public class sanskritFragment extends Fragment {
         root = inflater.inflate(R.layout.fragment_sanskrit, container, false);
         text = root.findViewById(R.id.text);
         text1 = root.findViewById(R.id.text1);
-        linelayout= root.findViewById(R.id.line_layout);
+        linelayout = root.findViewById(R.id.line_layout);
         linearLayout = root.findViewById(R.id.line);
 
         Button textLoad = root.findViewById(R.id.text_load);
@@ -76,8 +77,10 @@ public class sanskritFragment extends Fragment {
         });
         return root;
     }
-    boolean slide=true;
-    private void load_content(View textview , View text_view ,View another_textview) {
+
+    boolean slide = true;
+
+    private void load_content(View textview, View text_view, View another_textview) {
         if (slide) {
             slide = false;
             textview.animate().scaleX(0.2f).setDuration(10).start();

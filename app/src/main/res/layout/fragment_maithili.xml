@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MaithiliFragment"
-    android:background="@drawable/background"
+    android:background="@drawable/classbg2"
     android:padding="10dp">
 
 
@@ -18,9 +18,7 @@
         app:iss_corner_radius="@integer/material_motion_duration_short_2"
         app:iss_delay="1000"
         app:iss_period="1000"
-        app:iss_text_align="CENTER"
-        >
-    </com.denzcoskun.imageslider.ImageSlider>
+        app:iss_text_align="CENTER"/>
 
 
     <LinearLayout
@@ -28,34 +26,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="vertical"
         android:layout_marginTop="100dp"
-        >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
             android:minHeight="70dp"
             android:text="@string/faculty_member"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:layout_marginBottom="40dp"
             android:background="@drawable/rounded_corner"
+            android:textColor="@color/black"
+            android:textSize="20sp"
 
             />
+
         <TextView
             android:id="@+id/text1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:minHeight="70dp"
             android:text="@string/syllabus"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:textColor="@color/black"
             android:background="@drawable/rounded_corner"
-            />
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -64,29 +61,26 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="360dp"
-        android:visibility="gone"
-        >
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/linear_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:background="@drawable/arrow_background"
-            >
+            android:background="@drawable/arrow_background">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="40dp"
-                >
+                app:cardCornerRadius="40dp">
+
                 <ImageView
                     android:id="@+id/image_view1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/maithali"
-                    android:background="@drawable/rounded_corner"
-                    />
+                    android:background="@drawable/rounded_corner" />
 
             </androidx.cardview.widget.CardView>
 
@@ -96,19 +90,19 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="20dp"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/textview1"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Dr. Jeebach Ram"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
+
                 <Space
                     android:layout_width="wrap_content"
-                    android:layout_height="10dp"
-                    />
+                    android:layout_height="10dp" />
+
                 <TextView
                     android:id="@+id/textview2"
                     android:layout_width="160dp"
@@ -120,6 +114,7 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/line"
         android:layout_width="match_parent"
@@ -127,8 +122,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:orientation="vertical"
-        android:visibility="gone"
-        >
+        android:visibility="gone">
+
         <TextView
             android:id="@+id/text_start"
             android:layout_width="186dp"
@@ -139,12 +134,12 @@
             android:layout_marginStart="10dp"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="30dp" />
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            />
+            android:layout_height="30dp" />
+
         <Button
             android:id="@+id/text_load"
             android:layout_width="wrap_content"
@@ -158,8 +153,7 @@
             android:textStyle="bold"
             android:textSize="20sp"
             android:textColor="@drawable/button_text_focus_reverse"
-            android:backgroundTint="@drawable/button_background_reverse"
-            />
+            android:backgroundTint="@drawable/button_background_reverse" />
 
     </LinearLayout>
 </FrameLayout>

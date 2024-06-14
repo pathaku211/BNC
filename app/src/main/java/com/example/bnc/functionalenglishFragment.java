@@ -22,8 +22,8 @@ import java.util.ArrayList;
 
 public class functionalenglishFragment extends Fragment {
     View root;
-    TextView text,text1;
-    LinearLayout linearLayout,linelayout;
+    TextView text, text1;
+    LinearLayout linearLayout, linelayout;
     ImageSlider image;
 
     public functionalenglishFragment() {
@@ -74,8 +74,10 @@ public class functionalenglishFragment extends Fragment {
         });
         return root;
     }
-    boolean slide=true;
-    private void load_content(View textview , View text_view ,View another_textview) {
+
+    boolean slide = true;
+
+    private void load_content(View textview, View text_view, View another_textview) {
         if (slide) {
             slide = false;
             textview.animate().scaleX(0.2f).setDuration(10).start();

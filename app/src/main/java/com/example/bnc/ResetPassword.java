@@ -35,8 +35,8 @@ public class ResetPassword extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Intent intent = new Intent(ResetPassword.this, Login.class);
-                    startActivity(intent);
+                Intent intent = new Intent(ResetPassword.this, Login.class);
+                startActivity(intent);
             }
         });
 
